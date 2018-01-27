@@ -1,0 +1,9 @@
+Character is ready to use.
+You can drag right into Unity from the prefab folder.
+
+Animations:  
+In the Animations folder there are all the standard animations.
+ 
+Please if you have any question or suggestion don't hesitate in asking us.
+
+Hope you enjoy it!
