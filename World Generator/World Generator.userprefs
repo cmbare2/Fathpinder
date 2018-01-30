@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="World Generator.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Gaia\Scripts\SessionSystem\GaiaSessionManager.cs">
+    <Files>
+      <File FileName="Assets\Gaia\Scripts\SessionSystem\GaiaSessionManager.cs" Line="1570" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

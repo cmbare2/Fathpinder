@@ -1,0 +1,352 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:C:/Users/eltonolier/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll
+-r:C:/Users/eltonolier/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_2_1
+-define:UNITY_2017_2
+-define:UNITY_2017
+-define:UNITY_ANALYTICS
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:PLATFORM_STANDALONE_WIN
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+-define:GAIA_PRESENT
+-define:CROSS_PLATFORM_INPUT
+Assets/Characters/AllStarCharacterLibrary/Models/Particles/RayShot.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/AbilityClasses.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/ASCLBasicController.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/BasicHitCheck.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/CamTarget.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/CarCamera.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/CharacterControllerCollCheck.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/CharacterDemoController.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/CharacterPhysicsController.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/Enemy.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/Hit.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/killParticle.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/Missile.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/MouseOrbit.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/RadialAngler.cs
+Assets/Characters/AllStarCharacterLibrary/Scripts/RootMotionOff.cs
+Assets/Characters/FantasyCharactersLite/Scripts/AttachToBody.cs
+Assets/Characters/FantasyCharactersLite/Scripts/ChangeDisplay.cs
+Assets/Characters/FantasyCharactersLite/Scripts/RotateAround.cs
+Assets/Characters/Knight/scripts/rotator.cs
+Assets/Gaia/Scripts/Attributes/PreviewTextureAttribute.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/AQUASWaterSet.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/CountrySidePack.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/DesktopGroundCoverPackage.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/DesktopTreesPackage.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/DistingoGaiaExtension.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/GameTexturesCom.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/Tenkoku.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/ThirdPersonController.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/uConstruct.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/VillageExteriorsKit.cs
+Assets/Gaia/Scripts/ExtensionSystem/Compatible/VolumetricFog.cs
+Assets/Gaia/Scripts/ExtensionSystem/Extensions/CameraAndLight.cs
+Assets/Gaia/Scripts/ExtensionSystem/GaiaCompatiblePackage.cs
+Assets/Gaia/Scripts/ExtensionSystem/GaiaCompatiblePublisher.cs
+Assets/Gaia/Scripts/ExtensionSystem/GaiaExtensionManager.cs
+Assets/Gaia/Scripts/ExtensionSystem/Template.cs
+Assets/Gaia/Scripts/ExtensionSystem/TemplateFrame.cs
+Assets/Gaia/Scripts/GaiaConstants.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsArrayConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsDateConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsDictionaryConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsEnumConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsForwardConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsGuidConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsIEnumerableConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsKeyValuePairConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsNullableConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsPrimitiveConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsReflectedConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsTypeConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/fsWeakReferenceConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/AnimationCurve_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/Bounds_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/GameObject_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/Gradient_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/Keyframe_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/LayerMask_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/Rect_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/Converters/Unity/Texture2D_DirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsAotCompilationManager.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsBaseConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsConfig.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsContext.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsConverterRegistrar.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsData.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsDirectConverter.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsExceptions.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsIgnoreAttribute.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsISerializationCallbacks.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsJsonParser.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsJsonPrinter.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsMemberSerialization.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsObjectAttribute.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsObjectProcessor.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsPropertyAttribute.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsResult.cs
+Assets/Gaia/Scripts/JsonSerialiser/fsSerializer.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsCyclicReferenceManager.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsOption.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsPortableReflection.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsTypeExtensions.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsVersionedType.cs
+Assets/Gaia/Scripts/JsonSerialiser/Internal/fsVersionManager.cs
+Assets/Gaia/Scripts/JsonSerialiser/Reflection/fsMetaProperty.cs
+Assets/Gaia/Scripts/JsonSerialiser/Reflection/fsMetaType.cs
+Assets/Gaia/Scripts/JsonSerialiser/Reflection/fsReflectionUtility.cs
+Assets/Gaia/Scripts/JsonSerialiser/Reflection/fsTypeLookup.cs
+Assets/Gaia/Scripts/ResourcesSystem/GaiaDefaults.cs
+Assets/Gaia/Scripts/ResourcesSystem/GaiaResource.cs
+Assets/Gaia/Scripts/ResourcesSystem/GaiaSettings.cs
+Assets/Gaia/Scripts/ResourcesSystem/GaiaWorldManager.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoDetail.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoDetailSO.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoDNA.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoGameObject.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoGameObjectSO.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoStamp.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoTexture.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoTextureSO.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoTree.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceProtoTreeSO.cs
+Assets/Gaia/Scripts/ResourcesSystem/ResourceVisualiser.cs
+Assets/Gaia/Scripts/ScanningSystem/Scanner.cs
+Assets/Gaia/Scripts/SessionSystem/GaiaOperation.cs
+Assets/Gaia/Scripts/SessionSystem/GaiaSession.cs
+Assets/Gaia/Scripts/SessionSystem/GaiaSessionManager.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnCriteria.cs
+Assets/Gaia/Scripts/SpawningSystem/Spawner.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnerGroup.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnExtensions/SpawnGrassExtension.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnExtensions/SpawnTextureExtension.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnInfo.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnRule.cs
+Assets/Gaia/Scripts/SpawningSystem/SpawnRuleExtension.cs
+Assets/Gaia/Scripts/StampingSystem/RuntimeStamper.cs
+Assets/Gaia/Scripts/StampingSystem/Stamper.cs
+Assets/Gaia/Scripts/Utils/FractalGenerator.cs
+Assets/Gaia/Scripts/Utils/GaiaSceneInfo.cs
+Assets/Gaia/Scripts/Utils/HeightMap.cs
+Assets/Gaia/Scripts/Utils/QuadTree.cs
+Assets/Gaia/Scripts/Utils/ScaleTexture.cs
+Assets/Gaia/Scripts/Utils/SimplexNoiseGenerator.cs
+Assets/Gaia/Scripts/Utils/Singleton.cs
+Assets/Gaia/Scripts/Utils/TerrainHelper.cs
+Assets/Gaia/Scripts/Utils/TimedInstance.cs
+Assets/Gaia/Scripts/Utils/UnityHeightMap.cs
+Assets/Gaia/Scripts/Utils/Utils.cs
+Assets/Gaia/Scripts/Utils/WaterFlowMap.cs
+Assets/Gaia/Scripts/Utils/XorshiftPlus.cs
+Assets/Gaia/Scripts/ValueAdds/FrameRateManager.cs
+Assets/Gaia/Scripts/ValueAdds/Growth.cs
+Assets/Gaia/Scripts/ValueAdds/ScreenShotter.cs
+Assets/OutlineEffect/Demo/MaterialSwitcher.cs
+Assets/OutlineEffect/Demo/OutlineAnimation.cs
+Assets/OutlineEffect/Demo/Rotate.cs
+Assets/OutlineEffect/Demo/Toggle.cs
+Assets/OutlineEffect/LinkedSet.cs
+Assets/OutlineEffect/Outline.cs
+Assets/OutlineEffect/OutlineEffect.cs
+Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs
+Assets/PostProcessing/Runtime/Attributes/MinAttribute.cs
+Assets/PostProcessing/Runtime/Attributes/TrackballAttribute.cs
+Assets/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs
+Assets/PostProcessing/Runtime/Components/AmbientOcclusionComponent.cs
+Assets/PostProcessing/Runtime/Components/BloomComponent.cs
+Assets/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs
+Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs
+Assets/PostProcessing/Runtime/Components/ColorGradingComponent.cs
+Assets/PostProcessing/Runtime/Components/DepthOfFieldComponent.cs
+Assets/PostProcessing/Runtime/Components/DitheringComponent.cs
+Assets/PostProcessing/Runtime/Components/EyeAdaptationComponent.cs
+Assets/PostProcessing/Runtime/Components/FogComponent.cs
+Assets/PostProcessing/Runtime/Components/FxaaComponent.cs
+Assets/PostProcessing/Runtime/Components/GrainComponent.cs
+Assets/PostProcessing/Runtime/Components/MotionBlurComponent.cs
+Assets/PostProcessing/Runtime/Components/ScreenSpaceReflectionComponent.cs
+Assets/PostProcessing/Runtime/Components/TaaComponent.cs
+Assets/PostProcessing/Runtime/Components/UserLutComponent.cs
+Assets/PostProcessing/Runtime/Components/VignetteComponent.cs
+Assets/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs
+Assets/PostProcessing/Runtime/Models/AntialiasingModel.cs
+Assets/PostProcessing/Runtime/Models/BloomModel.cs
+Assets/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs
+Assets/PostProcessing/Runtime/Models/ChromaticAberrationModel.cs
+Assets/PostProcessing/Runtime/Models/ColorGradingModel.cs
+Assets/PostProcessing/Runtime/Models/DepthOfFieldModel.cs
+Assets/PostProcessing/Runtime/Models/DitheringModel.cs
+Assets/PostProcessing/Runtime/Models/EyeAdaptationModel.cs
+Assets/PostProcessing/Runtime/Models/FogModel.cs
+Assets/PostProcessing/Runtime/Models/GrainModel.cs
+Assets/PostProcessing/Runtime/Models/MotionBlurModel.cs
+Assets/PostProcessing/Runtime/Models/ScreenSpaceReflectionModel.cs
+Assets/PostProcessing/Runtime/Models/UserLutModel.cs
+Assets/PostProcessing/Runtime/Models/VignetteModel.cs
+Assets/PostProcessing/Runtime/PostProcessingBehaviour.cs
+Assets/PostProcessing/Runtime/PostProcessingComponent.cs
+Assets/PostProcessing/Runtime/PostProcessingContext.cs
+Assets/PostProcessing/Runtime/PostProcessingModel.cs
+Assets/PostProcessing/Runtime/PostProcessingProfile.cs
+Assets/PostProcessing/Runtime/Utils/ColorGradingCurve.cs
+Assets/PostProcessing/Runtime/Utils/GraphicsUtils.cs
+Assets/PostProcessing/Runtime/Utils/MaterialFactory.cs
+Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs
+Assets/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs
+Assets/Scripts/Rotate.cs
+Assets/Scripts/SceneController.cs
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity
