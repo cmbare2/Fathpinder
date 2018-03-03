@@ -2,3 +2,4 @@ World[[:space:]]Generator/Library/metadata/c6/c60886f37cee6d841955f0f4f6fdfedf f
 World[[:space:]]Generator/Library/PlayerDataCache/Data/level0 filter=lfs diff=lfs merge=lfs -text
 *.assets filter=lfs diff=lfs merge=lfs -text
 World[[:space:]]Generator/Library/PlayerDataCache/Data/sharedassets0.assets.resS filter=lfs diff=lfs merge=lfs -text
+World[[:space:]]Generator/Assets/Scenes/TestGaia.unity filter=lfs diff=lfs merge=lfs -text
