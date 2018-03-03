@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using cakeslice;
@@ -13,14 +14,25 @@ public class SceneController : MonoBehaviour
 	public Transform characterHolder;
 	public GameObject fullMapCamera;
 	public GameObject player;
+	//public MoveTo characterMenu;
+	public Transform characterMenu;
+	public GameObject characterMessage;
+	public GameObject originalListItem;
 
 	private bool topDown = true;
 	private GameObject holder;
 	private bool newCharacter = false;
 	private int newCharacterIdx = 0;
 	private int characterIdx = -1;
+	private float startingXTemp;
+	private float widthTemp;
 
 	void Start() {
+		startingXTemp = characterMenu.localPosition.x;
+		widthTemp = characterMenu.GetComponent<RectTransform> ().rect.width;
+		characterMenu.localPosition = new Vector3 (characterMenu.localPosition.x - widthTemp, characterMenu.localPosition.y);
+		//characterMenu.MoveImmediate(new Vector3(characterMenu.transform.localPosition.x - 300f, characterMenu.transform.localPosition.y));
+
 		var hit = new RaycastHit ();
 		if (Physics.Raycast (topDownCamera.transform.position, -Vector3.up, out hit)) {
 			perspectiveCamera.LookAt (hit.point);
@@ -30,7 +42,7 @@ public class SceneController : MonoBehaviour
 
 		Renderer[] renderers = newCharacterHolder.GetComponentsInChildren<Renderer> ();
 		foreach (Renderer renderer in renderers) {
-			Outline outline = renderer.gameObject.AddComponent<Outline> ();
+			cakeslice.Outline outline = renderer.gameObject.AddComponent<cakeslice.Outline> ();
 			outline.color = 2;
 			outline.enabled = false;
 		}
@@ -58,26 +70,7 @@ public class SceneController : MonoBehaviour
 					newCharacterIdx = 0;
 				newCharacterHolder.GetChild (newCharacterIdx).gameObject.SetActive (true);
 			} else if (Input.GetKeyDown (KeyCode.Return)) {
-				ExitNewCharacter ();
-				GameObject newCharacter = Instantiate (newCharacterHolder.GetChild (newCharacterIdx).gameObject);
-				newCharacter.transform.SetParent (characterHolder);
-				var hit = new RaycastHit ();
-				if (Physics.Raycast (topDownCamera.transform.position, -Vector3.up, out hit)) {
-					newCharacter.transform.position = new Vector3 (hit.point.x - 1, hit.point.y, hit.point.z + 1);
-					if (Physics.Raycast (newCharacter.transform.position, -Vector3.up, out hit)) {
-						newCharacter.transform.position = hit.point;
-					} else if (Physics.Raycast (newCharacter.transform.position, Vector3.up, out hit)) {
-						newCharacter.transform.position = hit.point;
-					}
-				}
-					
-				foreach (Outline outline in characterHolder.GetComponentsInChildren<Outline>()) {
-					outline.enabled = false;
-				}
-				characterIdx = characterHolder.childCount - 1;
-				foreach (Outline outline in newCharacter.GetComponentsInChildren<Outline>()) {
-					outline.enabled = true;
-				}
+				AddNewCharacter ();
 			}
 		} else {
 			var hit = new RaycastHit ();
@@ -114,11 +107,11 @@ public class SceneController : MonoBehaviour
 						UpdateHighlight ();
 					} else if (Input.GetKeyDown (KeyCode.Escape)) {
 						characterIdx = -1;
+						if (characterMenu.localPosition.x == startingXTemp)
+							ToggleCharacterMenu ();
 						UpdateHighlight ();
 					} else if (Input.GetKeyDown (KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace)) {
-						Destroy (characterHolder.GetChild (characterIdx).gameObject);
-						--characterIdx;
-						UpdateHighlight ();
+						RemoveCharacter ();
 					}
 				}
 			} else {
@@ -197,12 +190,7 @@ public class SceneController : MonoBehaviour
 			if (Input.GetKeyDown (KeyCode.G)) {
 				grid.SetActive (!grid.activeSelf);
 			} else if (Input.GetKeyDown (KeyCode.N)) {
-				if (topDown)
-					topDownCamera.gameObject.SetActive (false);
-				else
-					perspectiveCamera.gameObject.SetActive (false);
-				newCharacter = true;
-				characterCamera.SetActive (true);
+				ShowNewCharacter ();
 			} else if (Input.GetKeyDown (KeyCode.C) && !player.activeSelf) {
 				if (topDown) {
 					topDown = false;
@@ -225,6 +213,39 @@ public class SceneController : MonoBehaviour
 		}
 	}
 
+	public void ToggleCharacterMenu() {
+		//if (characterMenu.transform.localPosition == characterMenu.origin) {
+		//    characterMenu.MoveToPos(new Vector3(characterMenu.transform.localPosition.x - 300f, characterMenu.transform.localPosition.y), 2f);
+		//} else {
+		//	characterMenu.GoHome(2f);
+		//
+		//	if (characterIdx == -1)
+		//		characterIdx = 0;
+		//}
+
+		if (characterMenu.localPosition.x == startingXTemp) {
+			characterMenu.localPosition = new Vector3 (characterMenu.localPosition.x - widthTemp, characterMenu.localPosition.y);
+		} else {
+			characterMenu.localPosition = new Vector3 (startingXTemp, characterMenu.localPosition.y);
+
+			if (characterIdx == -1)
+				characterIdx = 0;
+		}
+	}
+
+	public void AddButtonPressed() {
+		if (newCharacter) {
+			AddNewCharacter ();
+		} else {
+			ShowNewCharacter ();
+		}
+	}
+
+	public void RemoveButtonPressed() {
+		if (!newCharacter)
+			RemoveCharacter ();
+	}
+
 	private void ExitNewCharacter() {
 		if (topDown)
 			topDownCamera.gameObject.SetActive (true);
@@ -235,14 +256,74 @@ public class SceneController : MonoBehaviour
 	}
 
 	private void UpdateHighlight() {
-		foreach (Outline outline in characterHolder.GetComponentsInChildren<Outline>()) {
+		foreach (cakeslice.Outline outline in characterHolder.GetComponentsInChildren<cakeslice.Outline>()) {
 			outline.enabled = false;
 		}
 
 		if (characterIdx != -1) {
-			foreach (Outline outline in characterHolder.GetChild (characterIdx).GetComponentsInChildren<Outline>()) {
+			GameObject current = characterHolder.GetChild (characterIdx).gameObject;
+			foreach (cakeslice.Outline outline in current.GetComponentsInChildren<cakeslice.Outline>()) {
 				outline.enabled = true;
 			}
+		}
+
+		foreach (Transform listItem in originalListItem.transform.parent) {
+			listItem.GetComponent<Image> ().color = Color.white;
+			listItem.GetComponentInChildren<Text> ().color = Color.black;
+		}
+
+		originalListItem.transform.parent.GetChild (characterIdx + 1).GetComponent<Image> ().color = Color.grey;
+		originalListItem.transform.parent.GetChild (characterIdx + 1).GetComponentInChildren<Text> ().color = Color.white;
+	}
+
+	private void AddNewCharacter() {
+		ExitNewCharacter ();
+		GameObject newCharacter = Instantiate (newCharacterHolder.GetChild (newCharacterIdx).gameObject);
+		newCharacter.transform.SetParent (characterHolder);
+		var hit = new RaycastHit ();
+		if (Physics.Raycast (topDownCamera.transform.position, -Vector3.up, out hit)) {
+			newCharacter.transform.position = new Vector3 (hit.point.x - 1, hit.point.y, hit.point.z + 1);
+			if (Physics.Raycast (newCharacter.transform.position, -Vector3.up, out hit)) {
+				newCharacter.transform.position = hit.point;
+			} else if (Physics.Raycast (newCharacter.transform.position, Vector3.up, out hit)) {
+				newCharacter.transform.position = hit.point;
+			}
+		}
+
+		characterIdx = characterHolder.childCount - 1;
+
+		// Add list item to menu
+		GameObject newListItem = Instantiate(originalListItem);
+		newListItem.transform.SetParent (originalListItem.transform.parent);
+		newListItem.SetActive (true);
+		newListItem.GetComponentInChildren<Text> ().text = newCharacterHolder.GetChild (newCharacterIdx).gameObject.name;
+		newListItem.GetComponent<Button> ().onClick.AddListener (new UnityEngine.Events.UnityAction(delegate {
+			characterIdx = newListItem.transform.GetSiblingIndex () - 1;
+			UpdateHighlight ();
+		}));
+		characterMessage.SetActive (false);
+
+		UpdateHighlight ();
+	}
+
+	private void ShowNewCharacter() {
+		if (topDown)
+			topDownCamera.gameObject.SetActive (false);
+		else
+			perspectiveCamera.gameObject.SetActive (false);
+		newCharacter = true;
+		characterCamera.SetActive (true);
+	}
+
+	private void RemoveCharacter() {
+		Destroy (characterHolder.GetChild (characterIdx).gameObject);
+		Destroy (originalListItem.transform.parent.GetChild (characterIdx + 1).gameObject);
+		--characterIdx;
+		UpdateHighlight ();
+		if (characterIdx == -1) {
+			characterMessage.SetActive (true);
+			if (characterMenu.localPosition.x == startingXTemp)
+				ToggleCharacterMenu ();
 		}
 	}
 }
