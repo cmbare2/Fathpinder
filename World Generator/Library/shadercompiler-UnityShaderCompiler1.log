@@ -1,4 +1,10 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
-Cmd: disassembleShader
-  api=15 insize=1840 outsize=1840 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1386 outsize=585 ok=1
+Cmd: compileComputeKernel
+  api=15 insize=3182 outsize=3741 ok=1
+Cmd: compileComputeKernel
+  api=15 insize=2285 outsize=5069 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3182 outsize=1925 ok=1
